@@ -1,14 +1,14 @@
-import ExpenseItem from "./components/ExpenseItem";
-import { Expenses } from "./components/ExpensesData";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
+import { Expenses } from "./components/Expenses/ExpensesData";
+import './App.css'
 
-function App() {
+const App = () => {
   return (
     <div>
       <h2>Let's get started!</h2>
       {Expenses.map((item) => {
-        console.log(item);
         return (
-          <div>
+          <div className="app-expense-all-item-container">
             <ExpenseItem
               title={item.title}
               amount={item.amount}
