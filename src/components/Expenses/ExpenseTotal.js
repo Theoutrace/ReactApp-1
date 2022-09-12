@@ -6,6 +6,8 @@ import "./ExpenseTotal.css";
 
 
 const ExpenseTotal = () => {
+
+
   return (
     <div>
       {Expenses.map((item) => {
@@ -16,7 +18,7 @@ const ExpenseTotal = () => {
                 title={item.title}
                 amount={item.amount}
                 date={item.date}
-                LocationOfExpenditure={item.LocationOfExpenditure}
+                // LocationOfExpenditure={item.LocationOfExpenditure}
               />
             </div>
           </>

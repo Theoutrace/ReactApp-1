@@ -4,13 +4,25 @@ import NewExpense from "./components/newExpense/NewExpense";
 import "./App.css";
 
 const App = () => {
+
+
+  const addExpenseHandler = (expense) =>{
+    // console.log('in app js');
+    console.log(expense);
+    
+    
+  }
+
+
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense />
+      <NewExpense onAddExpense = {addExpenseHandler}/>
       <ExpenseTotal />
     </div>
   );
+
+
 };
 
 export default App;
