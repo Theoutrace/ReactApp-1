@@ -5,8 +5,8 @@ import "./ExpenseDetails.css";
 const ExpenseDetails = (props) => {
   return (
     <Card className="expenseDetails-div">
-      <h2>{props.title}</h2>
-      <Card className="expense-item__price">${props.amount}</Card>
+      <h2>{props.ttl}</h2>
+      <Card className="expense-item__price">${props.amt}</Card>
     </Card>
   );
 };
