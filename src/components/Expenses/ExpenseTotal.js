@@ -19,9 +19,11 @@ const ExpenseTotal = (props) => {
     <div>
       <div className="app-expense-all-item-container">
         <Filter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-        {filteredExpenses.length === 0 ? <p>No items to show</p> : filteredExpenses.map((expense) => (
+        {filteredExpenses.length === 0 && <p>No items to show</p> }
+        {filteredExpenses.length >0 && filteredExpenses.map((expense) => (
           <ExpenseItem key={expense.id} exp={expense} />
         ))}
+        {filteredExpenses.length === 1 && <p>Only single Expense here. Please add more...</p>}
 
       </div>
     </div>
