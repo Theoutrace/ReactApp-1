@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import ExpenseItem from "./ExpenseItem";
 import Filter from "../Filter/Filter";
+import ExpensesChart from "./ExpensesChart";
 import "./ExpenseTotal.css";
 
 const ExpenseTotal = (props) => {
@@ -19,6 +20,7 @@ const ExpenseTotal = (props) => {
     <div>
       <div className="app-expense-all-item-container">
         <Filter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+        <ExpensesChart expenses={filteredExpenses}/>
         {filteredExpenses.length === 0 && <p>No items to show</p> }
         {filteredExpenses.length >0 && filteredExpenses.map((expense) => (
           <ExpenseItem key={expense.id} exp={expense} />
